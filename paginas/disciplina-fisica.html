@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Física | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow"><a href="areas-do-saber.html">Áreas do Saber</a> / Ciências da Natureza</p>
+  <h1>Física</h1>
+  <p class="subtitulo">O que estudei no 3º ano, os trabalhos que fiz e o que aprendi com eles.</p>
+  <div class="layout-interno">
+    <!-- MENU LATERAL: links internos para as seções desta página. -->
+    <aside class="menu-lateral" aria-label="Seções da disciplina">
+      <a href="#conteudos">Conteúdos</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#evidencias">Evidências</a>
+      <a href="#reflexao">Reflexão</a>
+    </aside>
+    <article class="painel-conteudo">
+      <figure class="figura">
+        <img src="../imagens/areas/fisica.jpg" alt="Contador Geiger, aparelho usado para medir radiação">
+        <figcaption>Contador Geiger, usado para medir radiação. Imagem: TimVickers, domínio público, via <a href="https://commons.wikimedia.org/wiki/File:Geiger_counter_2.jpg">Wikimedia Commons</a>.</figcaption>
+      </figure>
+      <section id="conteudos">
+        <h2>O que estudei</h2>
+        <ul class="lista-temas">
+          <li>Radiação e seus efeitos na comunidade</li>
+        </ul>
+        <p><strong>Radiação</strong> é energia que se propaga pelo espaço. Ela pode ser <strong>não ionizante</strong>, como a luz visível, as ondas de rádio e o Wi-Fi, ou <strong>ionizante</strong>, como os raios X e a radiação de materiais radioativos. A ionizante tem energia suficiente para alterar átomos e células, por isso exige cuidado, medição e controle.</p>
+        <p>A radiação está presente em muitas situações do dia a dia: o sol emite radiação ultravioleta (por isso usamos protetor solar), os aparelhos de raio X permitem ver os ossos, e as usinas nucleares geram energia a partir de materiais radioativos. Em todos esses casos, o importante é a <strong>dose</strong> e o <strong>tempo de exposição</strong>.</p>
+        <p>Para medir a radiação ionizante, usa-se o <strong>contador Geiger</strong>, que detecta as partículas e emite um som a cada detecção. É um exemplo de sensor, assim como os que usamos no curso técnico.</p>
+      </section>
+      <section id="atividades">
+        <h2>Atividades e trabalhos</h2>
+        <ul class="lista-trabalhos">
+          <li>Atividade: Radiação e decisões na comunidade</li>
+        </ul>
+        <p>A atividade discutiu como uma comunidade pode tomar decisões sobre o uso da radiação. Ela está presente em exames médicos, na geração de energia e em equipamentos, e cada uso tem benefícios e riscos que precisam ser comparados.</p>
+        <p>A atividade mostrou que decisões sobre radiação (instalar uma antena, construir uma usina, usar exames de imagem) precisam de informação científica confiável, e não de boatos. Também discutimos as regras de segurança e a importância da fiscalização.</p>
+      </section>
+      <section id="evidencias">
+        <h2>Evidências da aprendizagem</h2>
+        <p>A atividade foi entregue na plataforma de tarefas do Senac.</p>
+      </section>
+      <section id="reflexao">
+        <h2>Minha reflexão</h2>
+        <p>A Física se conecta direto com o curso de IoT: os dispositivos que usamos, como o ESP32, se comunicam por Wi-Fi e Bluetooth, que são radiação eletromagnética não ionizante.</p>
+        <p>Também percebi que muito do que fazemos com eletrônica, como ligar LEDs, ler sensores e alimentar circuitos, depende de conceitos de Física, como tensão, corrente e energia.</p>
+      </section>
+    </article>
+  </div>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Rafael Exposito • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac</p>
+  <p>Portfólio de aprendizagem: conhecimentos, projetos e memórias.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Formação Técnica | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Técnico em Internet das Coisas (IoT)</p><h1>Formação Técnica</h1>
+  <p class="subtitulo">Projetos práticos, programação e banco de dados desenvolvidos no curso de IoT.</p>
+  <!-- CARDS: projetos e conteúdos do curso. -->
+  <section class="grade-cards">
+    <article class="card">
+      <img src="../imagens/tecnica/esp32.jpg" alt="Módulo ESP32 com antena Wi-Fi e Bluetooth">
+      <h3>Mini Fábrica Inteligente</h3>
+      <p>Projeto do 3º ano com ESP32, câmera ESP32-CAM e banco de dados.</p>
+      <a class="botao" href="projeto-mini-fabrica.html">Ver projeto →</a>
+    </article>
+    <article class="card">
+      <img src="../imagens/tecnica/sensor-ultrassonico.jpg" alt="Sensor ultrassônico de distância">
+      <h3>Sensor de Ré</h3>
+      <p>Sistema que mede a distância até um obstáculo e avisa quando ele se aproxima.</p>
+      <a class="botao" href="projeto-sensor-de-re.html">Ver projeto →</a>
+    </article>
+    <article class="card">
+      <img src="../imagens/projetos/maquete-leds.jpg" alt="Maquete com LEDs acesos, fios e motores">
+      <h3>Maquete com iluminação de LEDs</h3>
+      <p>Maquete com áreas iluminadas por LEDs, apresentada pelo grupo.</p>
+      <a class="botao" href="projeto-maquete-leds.html">Ver projeto →</a>
+    </article>
+    <article class="card">
+      <img src="../imagens/tecnica/usinagem-cnc.jpg" alt="Máquina industrial automatizada">
+      <h3>Programação e Banco de Dados</h3>
+      <p>Algoritmos, Java, modelagem MER, SQL e redes.</p>
+      <a class="botao" href="programacao.html">Ver conteúdo →</a>
+    </article>
+    <article class="card">
+      <img src="../imagens/areas/estudos-livros.jpg" alt="Estante com livros">
+      <h3>Front-End</h3>
+      <p>HTML, CSS e JavaScript, usados para construir este portfólio.</p>
+      <a class="botao" href="front-end.html">Ver conteúdo →</a>
+    </article>
+  </section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Rafael Exposito • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac</p>
+  <p>Portfólio de aprendizagem: conhecimentos, projetos e memórias.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

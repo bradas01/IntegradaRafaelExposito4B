@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Áreas do Saber | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html" aria-current="page">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Formação geral</p><h1>Áreas do Saber</h1>
+  <p class="subtitulo">Além da formação técnica em IoT, o Ensino Médio é organizado em quatro áreas do conhecimento. Em cada uma, registro o que estudei no 3º ano e os trabalhos que fiz.</p>
+  <!-- CARDS: as quatro áreas do saber. -->
+  <section class="grade-cards">
+    <article class="card"><img src="../imagens/areas/ciencias-natureza.jpg" alt="Bancada de laboratório de química com vidrarias"><h3>Ciências da Natureza</h3><p>Biologia, Química e Física: seres vivos, química orgânica, polímeros e radiação.</p><a class="botao" href="ciencias-natureza.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/ciencias-humanas.jpg" alt="Mapa-múndi antigo do século XVII"><h3>Ciências Humanas</h3><p>História, Geografia, Filosofia e Sociologia: guerras e ditaduras, relações internacionais, ética e desigualdade.</p><a class="botao" href="ciencias-humanas.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/linguagens.jpg" alt="Prateleiras de biblioteca cheias de livros"><h3>Linguagens</h3><p>Português, Literatura, Inglês, Artes e Educação Física: leitura, fanzine, seminários e mostra de artes.</p><a class="botao" href="linguagens.html">Ver área →</a></article>
+    <article class="card"><img src="../imagens/areas/matematica-funcoes.jpg" alt="Gráficos de funções exponenciais"><h3>Matemática</h3><p>Estatística, matemática financeira, probabilidade, funções e geometria.</p><a class="botao" href="matematica.html">Ver área →</a></article>
+  </section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Rafael Exposito • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac</p>
+  <p>Portfólio de aprendizagem: conhecimentos, projetos e memórias.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

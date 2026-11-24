@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Memórias | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html" aria-current="page">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow">Registro visual</p><h1>Minhas Memórias</h1>
+  <p class="subtitulo">Eventos, visitas e trabalhos em equipe que marcaram o 3º ano.</p>
+  <!-- CARROSSEL HORIZONTAL: fotos e eventos do ano. -->
+  <section class="carrossel" data-carrossel>
+    <div class="controles-carrossel"><button type="button" data-anterior aria-label="Foto anterior">‹</button><button type="button" data-proximo aria-label="Próxima foto">›</button></div>
+    <div class="carrossel-faixa">
+      <article class="card slide"><img src="../imagens/tecnica/usinagem-cnc.jpg" alt="Máquina de usinagem CNC em uma fábrica (imagem ilustrativa)"><h3>Visita técnica à Sandvik</h3><p>Jundiaí, 17/09/2026. Visita a uma indústria de ferramentas para usinagem, para conhecer de perto processos de produção e automação.</p></article>
+      <article class="card slide"><img src="../imagens/memorias/turma-videoconferencia.jpg" alt="Turma reunida diante da câmera da sala de videoconferência, imagem exibida na tela"><h3>Turma reunida</h3><p>A turma reunida na sala de videoconferência da escola.</p></article>
+      <article class="card slide"><img src="../imagens/projetos/maquete-leds.jpg" alt="Maquete com LEDs acesos, fios e motores"><h3>Apresentação da maquete</h3><p>Maquete com iluminação de LEDs apresentada pelo grupo.</p></article>
+      <article class="card slide"><img src="../imagens/areas/historia.jpg" alt="Líderes na Conferência de Paris de 1919 (foto histórica)"><h3>Simulação da Conferência de Paris</h3><p>A turma recriou as negociações de paz de 1919, representando as delegações dos países.</p></article>
+      <article class="card slide"><img src="../imagens/areas/artes.jpg" alt="Pintura A Noite Estrelada (imagem ilustrativa)"><h3>Mostra de Artes</h3><p>Trabalho integrado entre Linguagens e Ciências da Natureza, com memorial descritivo.</p></article>
+    </div>
+  </section>
+  <section class="card"><h2>Outros eventos do ano</h2>
+    <ul class="lista-trabalhos"><li>12ª Maratona Cisco</li><li>Olimpíada de Química do Estado de São Paulo (OQSP)</li><li>Simulado do ENEM</li><li>Evento ConeXão</li></ul>
+  </section>
+  <p><strong>Privacidade:</strong> só publico fotos minhas ou de colegas que autorizaram. As imagens marcadas como ilustrativas têm licença livre e estão na página <a href="creditos.html">Créditos das imagens</a>.</p>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Rafael Exposito • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac</p>
+  <p>Portfólio de aprendizagem: conhecimentos, projetos e memórias.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de aprendizagem do Ensino Médio Técnico.">
+  <title>Sensor de Ré | Minha Trajetória</title>
+  <!-- Folha de estilos compartilhada. O caminho muda nas páginas dentro de /paginas. -->
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<!-- CABEÇALHO E MENU PRINCIPAL: o menu horizontal usa display:flex no CSS. -->
+<header class="site-header">
+  <a class="marca" href="../index.html">Minha Trajetória<small>Portfólio de Aprendizagem • Ensino Médio Técnico</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+  <nav aria-label="Navegação principal">
+    <ul class="menu-horizontal" id="menu-principal">
+      <li><a href="../index.html">Início</a></li><li><a href="areas-do-saber.html">Áreas do Saber</a></li><li><a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a></li><li><a href="curriculo.html">Currículo</a></li><li><a href="memorias.html">Memórias</a></li><li><a href="jornada.html">Jornada</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Projeto de IoT</p><h1>Sensor de Ré</h1>
+  <p class="subtitulo">Sistema de aviso de proximidade, como o sensor de estacionamento dos carros.</p>
+  <section class="hero">
+    <div><h2>Objetivo</h2><p>Medir a distância até um obstáculo e avisar o motorista quando ele estiver perto demais, evitando batidas na hora de estacionar.</p>
+      <h2>Materiais e tecnologias</h2>
+      <div class="etiquetas"><span class="etiqueta">Sensor de distância</span><span class="etiqueta">Microcontrolador</span><span class="etiqueta">Programação</span><span class="etiqueta">Circuitos</span></div>
+    </div>
+    <img class="hero-foto" src="../imagens/tecnica/sensor-ultrassonico.jpg" alt="Sensor ultrassônico de distância">
+  </section>
+  <section class="card"><h2>Como funciona</h2>
+    <p>O sensor de distância envia um sinal e mede quanto tempo ele leva para bater no obstáculo e voltar. Com esse tempo, o microcontrolador calcula a distância. O programa compara essa distância com limites definidos: quanto mais perto o obstáculo, mais forte ou mais rápido fica o aviso.</p>
+  </section>
+  <section class="card"><h2>O que aprendi</h2>
+    <p>Aprendi a ler um sensor, transformar a leitura em uma medida útil e usar estruturas de decisão no código para reagir a cada situação, a base de muitos projetos de IoT.</p>
+  </section>
+</main>
+<!-- RODAPÉ compartilhado por todas as páginas. -->
+<footer class="site-footer">
+  <p>Rafael Exposito • Turma 3IOT04 • Ensino Médio Técnico em IoT • Senac</p>
+  <p>Portfólio de aprendizagem: conhecimentos, projetos e memórias.</p>
+  <p><a href="../index.html">Voltar ao início</a> • <a href="creditos.html">Créditos das imagens</a></p>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
