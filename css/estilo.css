@@ -380,5 +380,12 @@ pre { overflow-x: auto; background: var(--azul-claro); padding: 12px; border-rad
 .site-footer a { color: #fff; }
 
 /* 18. Imagens dos trabalhos */
-.figura.trabalho img { display: block; width: auto; max-height: 560px; margin: 0 auto; object-fit: contain; border: 1px solid var(--borda); }
+.figura.trabalho img { display: block; width: auto; height: auto; max-height: 560px; margin: 0 auto; object-fit: contain; border: 1px solid var(--borda); }
 .card img.trabalho { object-fit: contain; background: var(--azul-claro); }
+
+/* 19. Vídeo e telas do projeto */
+.video-projeto { display: block; width: 100%; max-width: 340px; border-radius: 12px; background: #000; }
+.video-vertical { aspect-ratio: 9 / 16; object-fit: cover; }
+.telas figure { margin: 0; }
+.telas img { width: 100%; height: auto; max-height: 420px; object-fit: contain; }
+.telas figcaption { font-size: .85rem; color: var(--texto-suave); margin-top: 6px; }

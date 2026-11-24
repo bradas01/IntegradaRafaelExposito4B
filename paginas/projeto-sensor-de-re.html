@@ -21,20 +21,60 @@
 </header>
 <main>
   <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Projeto de IoT</p><h1>Sensor de Ré</h1>
-  <p class="subtitulo">Sistema de aviso de proximidade, como o sensor de estacionamento dos carros.</p>
+  <p class="subtitulo">Sistema de aviso de proximidade com Arduino, como o sensor de estacionamento dos carros.</p>
+  <!-- APRESENTAÇÃO do projeto. -->
   <section class="hero">
-    <div><h2>Objetivo</h2><p>Medir a distância até um obstáculo e avisar o motorista quando ele estiver perto demais, evitando batidas na hora de estacionar.</p>
-      <h2>Materiais e tecnologias</h2>
-      <div class="etiquetas"><span class="etiqueta">Sensor de distância</span><span class="etiqueta">Microcontrolador</span><span class="etiqueta">Programação</span><span class="etiqueta">Circuitos</span></div>
+    <div><h2>Objetivo</h2><p>Medir a distância até um obstáculo e avisar com luz e som quando ele estiver perto demais.</p>
+      <h2>Tecnologias</h2>
+      <div class="etiquetas"><span class="etiqueta">Arduino UNO</span><span class="etiqueta">Sensor ultrassônico</span><span class="etiqueta">LEDs</span><span class="etiqueta">Buzzer</span><span class="etiqueta">Arduino IDE</span></div>
     </div>
-    <img class="hero-foto" src="../imagens/tecnica/sensor-ultrassonico.jpg" alt="Sensor ultrassônico de distância">
+    <img class="hero-foto" src="../imagens/projetos/sensor-circuito.jpg" alt="Circuito na protoboard com sensor ultrassônico, buzzer e LED vermelho aceso">
+  </section>
+  <!-- VÍDEO: circuito e código. -->
+  <section class="card" id="video"><h2>Vídeo do projeto</h2>
+    <p>O vídeo mostra o circuito montado, com o LED vermelho aceso, a ligação USB com o computador e o código na Arduino IDE.</p>
+    <video class="video-projeto video-vertical" controls playsinline preload="metadata" poster="../imagens/projetos/sensor-arduino.jpg">
+      <source src="../videos/sensor-de-re.mp4" type="video/mp4">
+      Seu navegador não reproduz este vídeo. <a href="../videos/sensor-de-re.mp4">Abrir o arquivo</a>.
+    </video>
+  </section>
+  <section class="card"><h2>Componentes</h2>
+    <ul class="lista-trabalhos">
+      <li><strong>Arduino UNO:</strong> placa que executa o programa e controla o circuito</li>
+      <li><strong>Sensor ultrassônico:</strong> mede a distância até o obstáculo</li>
+      <li><strong>LEDs verde, amarelo e vermelho:</strong> mostram o aviso por cor</li>
+      <li><strong>Buzzer:</strong> emite o aviso sonoro</li>
+      <li><strong>Protoboard e jumpers:</strong> ligam os componentes sem solda</li>
+    </ul>
   </section>
   <section class="card"><h2>Como funciona</h2>
-    <p>O sensor de distância envia um sinal e mede quanto tempo ele leva para bater no obstáculo e voltar. Com esse tempo, o microcontrolador calcula a distância. O programa compara essa distância com limites definidos: quanto mais perto o obstáculo, mais forte ou mais rápido fica o aviso.</p>
+    <ol class="lista-trabalhos">
+      <li>O sensor envia um pulso de ultrassom e espera o eco voltar.</li>
+      <li>O programa guarda a medida na variável <code>distanciaCM</code>, em centímetros.</li>
+      <li>As condições comparam a distância com os limites definidos.</li>
+      <li>Com <strong>menos de 5 cm</strong>, o LED vermelho acende e o buzzer toca em 3000 Hz.</li>
+      <li>No último caso, o programa desliga os LEDs e o buzzer.</li>
+    </ol>
   </section>
-  <section class="card"><h2>O que aprendi</h2>
-    <p>Aprendi a ler um sensor, transformar a leitura em uma medida útil e usar estruturas de decisão no código para reagir a cada situação, a base de muitos projetos de IoT.</p>
+  <!-- CÓDIGO: trecho do programa do Arduino. -->
+  <section class="card" id="codigo"><h2>O código</h2>
+    <p>Este é o trecho final do código que aparece no vídeo. O <code>digitalWrite</code> liga (<code>HIGH</code>) ou desliga (<code>LOW</code>) um LED, o <code>tone</code> faz o buzzer tocar e o <code>noTone</code> faz parar.</p>
+    <pre><code>else if(distanciaCM &lt; 5) {
+  digitalWrite(ledVermelho, HIGH);
+  tone(buzzer, 3000);
+}
+else {  // desliga todos os LEDs e o buzzer
+  digitalWrite(ledVerde, LOW);
+  digitalWrite(ledAmarelo, LOW);
+  digitalWrite(ledVermelho, LOW);
+  noTone(buzzer);
+}</code></pre>
+    <figure class="figura trabalho">
+      <img src="../imagens/projetos/sensor-codigo.jpg" alt="Tela da Arduino IDE com o código do sensor de ré e a placa Arduino UNO selecionada">
+      <figcaption>Código na Arduino IDE.</figcaption>
+    </figure>
   </section>
+  <section class="card"><h2>O que aprendi</h2><p>Aprendi a ler um sensor, transformar a leitura em uma medida útil e usar estruturas de decisão para reagir a cada situação. É a mesma lógica de muitos projetos de IoT: medir, decidir e agir.</p></section>
 </main>
 <!-- RODAPÉ compartilhado por todas as páginas. -->
 <footer class="site-footer">

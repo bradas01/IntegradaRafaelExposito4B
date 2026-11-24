@@ -21,43 +21,64 @@
 </header>
 <main>
   <p class="eyebrow"><a href="formacao-tecnica.html">Formação Técnica</a> / Projeto de IoT</p><h1>Mini Fábrica Inteligente</h1>
-  <p class="subtitulo">Projeto do 3º ano com ESP32, ESP32-CAM e banco de dados.</p>
+  <p class="subtitulo">Projeto do 3º ano: uma esteira que identifica a cor dos objetos e registra cada detecção.</p>
   <!-- APRESENTAÇÃO do projeto. -->
   <section class="hero">
-    <div><h2>O desafio</h2><p>Simular, em escala reduzida, uma linha de produção automatizada, como as das indústrias, em que as máquinas identificam o que está sendo produzido e registram essas informações sozinhas.</p>
-      <h2>Objetivo</h2><p>Usar o ESP32 para controlar a mini fábrica, a câmera ESP32-CAM para capturar imagens dos objetos e um banco de dados para guardar os registros da produção.</p>
-      <div class="etiquetas"><span class="etiqueta">ESP32</span><span class="etiqueta">ESP32-CAM</span><span class="etiqueta">Banco de dados</span><span class="etiqueta">Trabalho em equipe</span></div>
+    <div><h2>O desafio</h2><p>Simular, em escala reduzida, uma linha de produção que identifica o que passa por ela e registra essas informações sozinha.</p>
+      <h2>Objetivo</h2><p>Mover os objetos em uma esteira, identificar a cor de cada um e guardar os registros em um banco de dados, para acompanhar tudo por um painel no celular.</p>
+      <div class="etiquetas"><span class="etiqueta">ESP32</span><span class="etiqueta">ESP32-CAM</span><span class="etiqueta">Banco de dados</span><span class="etiqueta">Painel web</span><span class="etiqueta">Trabalho em equipe</span></div>
     </div>
-    <img class="hero-foto" src="../imagens/tecnica/esp32.jpg" alt="Módulo ESP32 (imagem ilustrativa)">
+    <img class="hero-foto" src="../imagens/projetos/esteira.jpg" alt="Esteira do projeto, com motor amarelo, fios e bateria">
   </section>
-  <section class="card"><h2>Materiais e tecnologias</h2>
-    <ul class="lista-trabalhos">
-      <li><strong>ESP32:</strong> microcontrolador com Wi-Fi e Bluetooth, o "cérebro" do projeto</li>
-      <li><strong>ESP32-CAM:</strong> placa ESP32 com câmera, usada para capturar imagens</li>
-      <li><strong>Banco de dados:</strong> guarda as informações coletadas pelos dispositivos</li>
-    </ul>
+  <!-- VÍDEO: teste da esteira com o painel no celular. -->
+  <section class="card" id="video"><h2>Vídeo do projeto</h2>
+    <p>O vídeo mostra o teste: cada objeto é colocado na esteira, e o painel "IoT Sorting", aberto no celular, é atualizado com a nova detecção.</p>
+    <video class="video-projeto" controls playsinline preload="metadata" poster="../imagens/projetos/painel-resumo.jpg">
+      <source src="../videos/esteira-banco-de-dados.mp4" type="video/mp4">
+      Seu navegador não reproduz este vídeo. <a href="../videos/esteira-banco-de-dados.mp4">Abrir o arquivo</a>.
+    </video>
   </section>
-  <!-- ETAPAS do projeto. -->
-  <section class="grade-cards">
-    <article class="card"><h3>1. Planejamento</h3><p>Definir o que a mini fábrica deveria fazer, escolher os componentes e dividir as tarefas no grupo.</p></article>
-    <article class="card"><h3>2. Construção</h3><p>Montar a estrutura e os circuitos, programar o ESP32 e a ESP32-CAM e preparar o banco de dados.</p></article>
-    <article class="card"><h3>3. Integração</h3><p>Fazer os dispositivos se comunicarem pela rede e enviarem os dados para o banco.</p></article>
-    <article class="card"><h3>4. Testes</h3><p>Verificar a captura das imagens e o registro das informações, corrigindo os erros encontrados.</p></article>
-  </section>
-  <section class="card"><h2>O que aprendi</h2><p>O projeto juntou quase tudo o que estudei no curso: programação de microcontroladores, comunicação entre dispositivos (a base da Internet das Coisas) e banco de dados. Também mostrou, em pequena escala, como a automação e o registro de dados funcionam nas fábricas de verdade.</p></section>
   <section class="card"><h2>Como funciona</h2>
-    <p>O funcionamento segue o caminho dos dados em um sistema de IoT:</p>
     <ol class="lista-trabalhos">
-      <li>O objeto chega à área de leitura da mini fábrica.</li>
-      <li>A <strong>ESP32-CAM</strong> captura a imagem do objeto.</li>
-      <li>O <strong>ESP32</strong> processa a informação e controla as partes da mini fábrica.</li>
-      <li>Os dados (qual objeto passou e quando) são enviados pela rede Wi-Fi para o <strong>banco de dados</strong>.</li>
-      <li>Com os registros guardados, é possível saber quantos objetos de cada tipo foram produzidos.</li>
+      <li>O objeto é colocado na esteira, que é movida por um motor.</li>
+      <li>A cor do objeto é identificada. No painel, o dispositivo aparece como <strong>Esteira Principal</strong>, código <strong>ESP32CAM-001</strong>.</li>
+      <li>A detecção é registrada com horário, cor, confiança e dispositivo.</li>
+      <li>O painel soma os registros e atualiza a contagem e o gráfico de cores.</li>
     </ol>
   </section>
-  <section class="card"><h2>Desafios</h2>
-    <p>Projetos que juntam câmera, microcontrolador e banco de dados têm desafios em cada parte: a iluminação influencia a qualidade da imagem, a conexão Wi-Fi precisa ser estável para enviar os dados, e o banco de dados precisa estar bem modelado para guardar as informações sem repetição. Por isso, o caminho mais seguro é testar cada parte separadamente antes de juntar tudo.</p>
+  <!-- PAINEL: telas do sistema no celular. -->
+  <section class="card" id="painel"><h2>Painel "IoT Sorting"</h2>
+    <ul class="lista-trabalhos">
+      <li>Estado da esteira (ligada) e do ESP32 (on-line)</li>
+      <li>Total de objetos do dia e contagem por cor</li>
+      <li>Gráfico com a distribuição das cores</li>
+      <li>Dados do dispositivo: nome, código, endereço IP, última conexão e última detecção</li>
+      <li>Formulário para cadastrar outro dispositivo</li>
+    </ul>
+    <div class="grade-cards telas">
+      <figure><img src="../imagens/projetos/painel-resumo.jpg" alt="Painel no celular com 4 objetos no dia e a contagem de vermelhos, verdes e azuis"><figcaption>Resumo do dia</figcaption></figure>
+      <figure><img src="../imagens/projetos/painel-cores.jpg" alt="Painel no celular com o gráfico de distribuição das cores e os dados do dispositivo"><figcaption>Distribuição das cores e dispositivo</figcaption></figure>
+      <figure><img src="../imagens/projetos/painel-deteccoes.jpg" alt="Painel no celular com a tabela das últimas detecções: azul, vermelho, branco e preto"><figcaption>Últimas detecções</figcaption></figure>
+    </div>
+    <p>No fim do teste, o painel mostrava <strong>4 objetos no dia</strong>: um preto, um branco, um vermelho e um azul. Na tabela "Últimas detecções", eles aparecem do mais recente para o mais antigo.</p>
   </section>
+  <section class="card" id="banco-de-dados"><h2>O banco de dados</h2>
+    <p>Para o painel funcionar, as informações precisam estar organizadas. Pelos campos que aparecem na tela, dá para pensar em duas tabelas: uma de <strong>dispositivos</strong> e outra de <strong>detecções</strong>. Um dispositivo pode ter várias detecções.</p>
+    <div class="tabela-rolavel">
+      <table class="tabela-creditos">
+        <thead><tr><th>Tabela</th><th>Campos</th></tr></thead>
+        <tbody>
+          <tr><td>dispositivo</td><td>código, nome, endereço IP, status, última conexão</td></tr>
+          <tr><td>detecção</td><td>horário, cor, confiança, código do dispositivo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Exemplo de consulta para contar os objetos por cor, a mesma ideia do gráfico:</p>
+    <pre><code>SELECT cor, COUNT(*) AS total
+FROM deteccao
+GROUP BY cor;</code></pre>
+  </section>
+  <section class="card"><h2>O que aprendi</h2><p>O projeto juntou o que estudei no curso: montagem, microcontrolador, comunicação entre dispositivos e banco de dados. Ver o objeto passar na esteira e o número mudar no celular mostra o caminho completo do dado.</p></section>
 </main>
 <!-- RODAPÉ compartilhado por todas as páginas. -->
 <footer class="site-footer">
